@@ -13,4 +13,23 @@
 }
 
 
-DETAILS
+/* DETAILS */
+.margdetail {
+
+    margin-left: 17%;
+    margin-right: 17%;
+    margin-top: 4%;
+    margin-bottom: 3%;
+   
+  }
+  
+  .espacio {
+    padding-left: 5%;
+    padding-top: 5%;
+  
+  }
+  #espacio2{
+    padding-right: 5%;
+    padding-top: 1%;
+  }
+  
