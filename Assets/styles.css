@@ -1,10 +1,12 @@
+/*------------------General-----------------------*/
+
+body{
+    min-height: 100vh;
+}
+
 .logo{
     width: 150px;
     height: 150px;
-}
-
-.imgcarrusel{
-    height: 200px;
 }
 
 .imgicono{
@@ -12,6 +14,35 @@
     height: 20px;
 }
 
+.imgcarrusel{
+    height: 200px;
+}
+
+@media screen and (max-width: 332px) {
+
+    .imgcarrusel{
+        height: 230px;
+    }
+    .logo{
+        width: 120px;
+        height: 120px;  
+    }
+}
+/*------------------Home-----------------------*/
+
 .imgcard{
     height: 200px;
 }
+
+.cards{
+    margin-bottom: 10%;
+}
+
+@media screen and (max-width: 332px) {
+    .imgcard
+    {
+        height: 150px;
+    } 
+}
+
+
