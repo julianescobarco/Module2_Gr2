@@ -1,13 +1,37 @@
+/*------------------General-----------------------*/
+
+body{
+    min-height: 100vh;
+}
+
 .logo{
     width: 150px;
     height: 150px;
+}
+
+.imgicono{
+    width: 20px;
+    height: 20px;
 }
 
 .imgcarrusel{
     height: 200px;
 }
 
-.imgicono{
-    width: 20px;
-    height: 20px;
+@media screen and (max-width: 332px) {
+
+    .imgcarrusel{
+        height: 230px;
+    }
+    .logo{
+        width: 120px;
+        height: 120px;  
+    }
+}
+
+
+/*------------------Contact-----------------------*/
+
+.formcontact{
+    width: 60%;
 }
