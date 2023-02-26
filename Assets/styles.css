@@ -1,7 +1,7 @@
 /*------------------General-----------------------*/
 
 body{
-  min-height: 100vh;
+    min-height: 100vh;
 }
 
 .logo{
@@ -30,19 +30,25 @@ body{
   }
 }
 
-/*------------------Home-----------------------*/
-.imgcard {
-  height: 200px;
+/*------------------Home & Events-----------------------*/
+
+.imgcard{
+    height: 200px;
 }
 
-.cards {
-  margin-bottom: 10%;
+.cards{
+    margin-bottom: 10%;
 }
 
 @media screen and (max-width: 332px) {
-  .imgcard {
-    height: 150px;
-  }
+    .imgcard
+    {
+        height: 150px;
+    } 
+}
+
+.seemore{
+    box-shadow: -4px -2px 15px 1px #000000;
 }
 
 /*------------------Contact-----------------------*/
@@ -50,7 +56,6 @@ body{
 .formcontact{
     width: 60%;
 }
-=======
 
 /*------------------Detail-----------------------*/
 
