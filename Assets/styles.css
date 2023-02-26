@@ -45,6 +45,12 @@ body{
   }
 }
 
+/*------------------Contact-----------------------*/
+
+.formcontact{
+    width: 60%;
+}
+=======
 
 /*------------------Detail-----------------------*/
 
@@ -80,4 +86,3 @@ body{
   font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg .tg-7btt{border-color:inherit;font-weight:bold;vertical-align:top; background-color: gray;}
 .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-
