@@ -1,37 +1,88 @@
 /*------------------General-----------------------*/
 
 body{
-    min-height: 100vh;
+  min-height: 100vh;
 }
 
 .logo{
-    width: 150px;
-    height: 150px;
+  width: 150px;
+  height: 150px;
 }
 
-.imgicono{
-    width: 20px;
-    height: 20px;
+.imgicono {
+  width: 20px;
+  height: 20px;
 }
 
-.imgcarrusel{
-    height: 200px;
+.imgcarrusel {
+  height: 200px;
 }
 
 @media screen and (max-width: 332px) {
 
-    .imgcarrusel{
-        height: 230px;
-    }
-    .logo{
-        width: 120px;
-        height: 120px;  
-    }
+  .imgcarrusel {
+    height: 230px;
+  }
+
+  .logo {
+    width: 120px;
+    height: 120px;
+  }
 }
 
+/*------------------Home-----------------------*/
+.imgcard {
+  height: 200px;
+}
+
+.cards {
+  margin-bottom: 10%;
+}
+
+@media screen and (max-width: 332px) {
+  .imgcard {
+    height: 150px;
+  }
+}
 
 /*------------------Contact-----------------------*/
 
 .formcontact{
     width: 60%;
 }
+=======
+
+/*------------------Detail-----------------------*/
+
+.sombradetails {
+  box-shadow: -4px -2px 15px 1px #000000;
+}
+
+.imgicono{
+  width: 20px;
+  height: 20px;
+}
+
+.imgcarrusel{
+  height: 200px;
+}
+
+@media screen and (max-width: 332px) {
+
+  .imgcarrusel{
+      height: 230px;
+  }
+  .logo{
+      width: 120px;
+      height: 120px;  
+  }
+}
+
+/*------------------Stats-----------------------*/
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-7btt{border-color:inherit;font-weight:bold;vertical-align:top; background-color: gray;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
