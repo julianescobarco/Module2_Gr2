@@ -4,7 +4,7 @@ let fechaActual = data.fechaActual
 let eventos = data.eventos
 
 for (let i = 0; i < eventos.length; i++) {
-    let id = "tarjeta" + (i + 1)
+    let id = (i + 1)
     let div = crearDiv(id, eventos[i])
     document.querySelector('#carrusel').appendChild(div)
 }
@@ -23,15 +23,23 @@ function crearDiv(id, objeto) {
           </div>
           <div class="card-footer bg-transparent d-flex justify-content-between flex-wrap text-center">
             <small class="card-text mt-2 mb-2 ms-1">Price: ${objeto.price}</small>
-            <a href="detail.html" class="btn btn-outline-dark me-1 seemore">See more</a>
+            <a id="${id-1}" class="btn btn-outline-dark me-1 seemore">See more</a>
           </div>
         </div>
       </div>
         `
-
+    
     return div
-
 }
+
+document.addEventListener('click', (event) => {
+    const { target } = event;
+    sessionStorage.setItem("idClick", JSON.stringify(target.id));
+    if(target.id){
+        window.location.href = "../detail.html";
+    }
+})
+
 
 let swiper = new Swiper(".mySwiper", {
     
@@ -63,3 +71,4 @@ let swiper = new Swiper(".mySwiper", {
         },
     }
 });
+

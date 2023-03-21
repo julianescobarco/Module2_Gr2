@@ -98,6 +98,12 @@ opacity: 0.6;
   box-shadow: -4px -2px 15px 1px #000000;
 }
 
+.imgdetail{
+  width: 90%;
+  height: 420px;
+  object-fit: cover;
+}
+
 /*------------------Stats-----------------------*/
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;

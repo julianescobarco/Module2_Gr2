@@ -152,7 +152,7 @@ export const data = {
             "category": "Cinema",
             "place": "Room D1",
             "capacity": 9000,
-            "estimate": 9000,
+            "assistance": 9000,
             "price": 250
         }
     ]
