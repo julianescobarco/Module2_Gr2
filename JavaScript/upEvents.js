@@ -3,9 +3,20 @@ import {data} from "./data.js";
 let fechaActual = data.fechaActual
 let eventos = data.eventos
 
+let arrayEventosPasados = []
+let arrayEventosFuturos = []
+
 for (let i = 0; i < eventos.length; i++) {
+    if (eventos[i].date < fechaActual) {
+        arrayEventosPasados.push(eventos[i])
+    } else {
+        arrayEventosFuturos.push(eventos[i])
+    }
+}
+
+for (let i = 0; i < arrayEventosFuturos.length; i++) {
     let id = "tarjeta" + (i + 1)
-    let div = crearDiv(id, eventos[i])
+    let div = crearDiv(id, arrayEventosFuturos[i])
     document.querySelector('#carrusel').appendChild(div)
 }
 
