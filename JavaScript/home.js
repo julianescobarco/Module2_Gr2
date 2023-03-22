@@ -23,7 +23,7 @@ function crearDiv(id, objeto) {
           </div>
           <div class="card-footer bg-transparent d-flex justify-content-between flex-wrap text-center">
             <small class="card-text mt-2 mb-2 ms-1">Price: ${objeto.price}</small>
-            <a id="${id-1}" class="btn btn-outline-dark me-1 seemore">See more</a>
+            <a id="${id-1}home" class="btn btn-outline-dark me-1 seemore">See more</a>
           </div>
         </div>
       </div>
