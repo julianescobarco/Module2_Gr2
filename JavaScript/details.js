@@ -14,58 +14,36 @@ for (let i = 0; i < eventos.length; i++) {
     }
 }
 
-function detailsCard(container,eventos) {
-    
-    container.innerHTML = ""; 
-    eventos.forEach(element => {
-        const div = document.createElement("div");
-        div.className= "row"
-        let idupco = JSON.parse(sessionStorage.getItem('idClick'));
-        let detailupco = idClick+"upco"
-        if (idupco==detailupco) {
+function detailsCard(eventos) {
+    let imgdetail = document.getElementById('imgdetail');
+    let titulodetail = document.querySelector('#titulodetail');
+    let date = document.querySelector('#date');
+    let description = document.querySelector('#description');
+    let category = document.querySelector('#category');
+    let place = document.querySelector('#place');
+    let capacity = document.querySelector('#capacity');
+    let ases = document.querySelector('#ases');
+    let price = document.querySelector('#price');
 
-            div.innerHTML = `
-            <div class="col-0"></div>
-                <div class="col-lg-6 col-md-6  text-center bg-body-secondary p-4">
-                    <img src="${element.image}" class="rounded img-fluid h-100 sombradetails" alt="${element.name}">
-                </div>
-            <div class="col-lg-6 col-md-6  text-center d-flex flex-column justify-content-center bg-body-secondary p-4">
-                <h3 >${element.name}</h3> <br>
-                <p class="fs-5 text-start">Date: ${element.date}</p>
-                <p class="fs-5 text-start">Description: ${element.description} </p>
-                <p class="fs-5 text-start">Category: ${element.category} </p>
-                <p class="fs-5 text-start">Place: ${element.place} </p>
-                <p class="fs-5 text-start">Capacity: ${element.capacity} </p>
-                <p class="fs-5 text-start">Estimate: ${element.estimate} </p>
-                <p class="fs-5 text-start">Price: ${element.price} </p>
-            </div>
-            <div class="col-0"></div>
-        </div>`
-            
-        }else{
+    let idClickStr = JSON.parse(sessionStorage.getItem('idClick'));
+    let idClick = parseInt(idClickStr);
 
-            div.innerHTML = `
-            <div class="col-0"></div>
-                <div class="col-lg-6 col-md-6  text-center bg-body-secondary p-4">
-                    <img src="${element.image}" class="rounded img-fluid h-100 sombradetails" alt="${element.name}">
-                </div>
-            <div class="col-lg-6 col-md-6  text-center d-flex flex-column justify-content-center bg-body-secondary p-4">
-                <h3 >${element.name}</h3> <br>
-                <p class="fs-5 text-start">Date: ${element.date}</p>
-                <p class="fs-5 text-start">Description: ${element.description} </p>
-                <p class="fs-5 text-start">Category: ${element.category} </p>
-                <p class="fs-5 text-start">Place: ${element.place} </p>
-                <p class="fs-5 text-start">Capacity: ${element.capacity} </p>
-                <p class="fs-5 text-start">Assistance: ${element.assistance} </p>
-                <p class="fs-5 text-start">Price: ${element.price} </p>
-            </div>
-            <div class="col-0"></div>
-        </div>`
+    imgdetail.src = eventos[idClick].image
+    imgdetail.alt = eventos[idClick].name
+    titulodetail.textContent = eventos[idClick].name
+    date.textContent = "Date: " +eventos[idClick].date
+    description.textContent = "Description: " +eventos[idClick].description
+    category.textContent = "Category: " +eventos[idClick].category
+    place.textContent = "Place: " +eventos[idClick].place
+    capacity.textContent = "Capacity: " +eventos[idClick].capacity
+    price.textContent = "Price: " +eventos[idClick].price
+    if (eventos[idClick].assistance != undefined) {
+        ases.textContent = "Assistance: " +eventos[idClick].assistance
 
-        }
-        
-        container.appendChild(div);
-    });
+    }else{
+        ases.textContent = "Estimate: " +eventos[idClick].estimate
+    }
+
 }
 
 let idClickStr = JSON.parse(sessionStorage.getItem('idClick'));
@@ -74,13 +52,10 @@ let detailhome = idClick+"home"
 let detailpast = idClick+"past"
 let detailup = idClick+"upco"
 
-let detailcontainer = document.querySelector('#detail');
-
-
 if (idClickStr == detailhome) {
-    document.addEventListener('DOMContentLoaded', () => detailsCard(detailcontainer,[eventos[idClick]]));
+    detailsCard(eventos);
 } else if(idClickStr == detailup){
-    document.addEventListener('DOMContentLoaded', () => detailsCard(detailcontainer,[arrayEventosFuturos[idClick]]));
+    detailsCard(arrayEventosFuturos);
 } else if(idClickStr == detailpast){
-    document.addEventListener('DOMContentLoaded', () => detailsCard(detailcontainer,[arrayEventosPasados[idClick]]));
+    detailsCard(arrayEventosPasados);
 }

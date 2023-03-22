@@ -35,7 +35,7 @@ export const data = {
             "price": 15
         },
         {
-            "image": "https://media.cntraveler.com/photos/638f9e37498ffb9bd83a9bb7/4:3/w_3148,h_2361,c_limit/Louvre,%20Paris_mika-baumeister-GCfE4fl7tIQ-unsplash.jpg",
+            "image": "https://www.wendyperrin.com/wp-content/uploads/2016/11/Paris-Louvre-at-night-Pixabay.jpg",
             "name": "Parisian Museum",
             "date": "2022-11-02",
             "description": "A unique tour in the city of lights, get to know one of the most iconic places.",
