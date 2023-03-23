@@ -1,11 +1,11 @@
 import {data} from "./data.js";
 
-let fechaActual = data.fechaActual
-let eventos = data.eventos
+let fechaActual = data.fechaActual // lectura de fecha actual desde data.js
+let eventos = data.eventos  // lectura de eventos desde data.js
 
-let arrayEventosPasados = []
-let arrayEventosFuturos = []
-
+let arrayEventosPasados = []  //inicializar Array de Eventos pasados
+let arrayEventosFuturos = [] //inicializar Array de Eventos Futuros
+// Clasificación de eventos según fecha
 for (let i = 0; i < eventos.length; i++) {
     if (eventos[i].date < fechaActual) {
         arrayEventosPasados.push(eventos[i])
@@ -13,13 +13,13 @@ for (let i = 0; i < eventos.length; i++) {
         arrayEventosFuturos.push(eventos[i])
     }
 }
-
+// Se crea for que recorra el Array de Eventos Futuros y ejecute la función que crea las cards
 for (let i = 0; i < arrayEventosFuturos.length; i++) {
     let id = (i + 1)
     let div = crearDiv(id, arrayEventosFuturos[i])
     document.querySelector('#carrusel').appendChild(div)
 }
-
+// Se crea la función dinámica que crea la card con la información del eventos
 function crearDiv(id, objeto) {
     let div = document.createElement('div');
     div.className= "swiper-slide"
@@ -43,13 +43,13 @@ function crearDiv(id, objeto) {
     return div
 
 }
-
+// Se crea la función que se va a ejecutar cuando se acciona el boton
 window.click_here = function(buttonId) {
-    window.location.href = "../detail.html";
-    window.idClickStr = buttonId
-    sessionStorage.setItem("idClickStr",idClickStr)
+    window.location.href = "../detail.html"; // se trae la dirección local y se cambia a la dirección de details
+    window.idClickStr = buttonId // Se almacena el valor del parámetro (buttonId)
+    sessionStorage.setItem("idClickStr",idClickStr) // Se almacena la información en el Storage
    }
-
+// se crea la función para el carrusel de slides con swiper
 let swiper = new Swiper(".mySwiper", {
     
     navigation: {
