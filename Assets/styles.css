@@ -1,5 +1,4 @@
 /*------------------General-----------------------*/
-
 body{
     min-height: 100vh;
 }
@@ -31,25 +30,61 @@ body{
 }
 
 /*------------------Home & Events-----------------------*/
-
-.imgcard{
-    height: 200px;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.cards{
-    margin-bottom: 10%;
-}
-
-@media screen and (max-width: 332px) {
-    .imgcard
-    {
-        height: 150px;
-    } 
-}
-
 .seemore{
     box-shadow: -4px -2px 15px 1px #000000;
 }
+
+.containercards {
+  width: 90%;
+  margin-left:auto;
+  margin-right: auto;
+  margin-bottom: 30px; 
+}
+
+.containercards .swiper {
+  width: 100%;
+  height: 100%;
+  
+}
+
+.containercards .swiper-slide {
+  position: relative;
+  text-align: center;
+  height: auto;
+}
+
+.containercards .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.swiper-button-next {
+  --swiper-navigation-size: 35px;
+  --swiper-navigation-color: #ffffff;
+  background-color: black;
+  border-radius: 0px 10px 10px 0px;
+  opacity: 0.6;
+  
+  
+}
+
+.containercards .swiper-button-prev {
+--swiper-navigation-size: 35px;
+--swiper-navigation-color: #ffffff;
+background-color: black;
+border-radius: 10px 0px 0px 10px;
+opacity: 0.6;
+
+
+}
+
 
 /*------------------Contact-----------------------*/
 
@@ -63,24 +98,10 @@ body{
   box-shadow: -4px -2px 15px 1px #000000;
 }
 
-.imgicono{
-  width: 20px;
-  height: 20px;
-}
-
-.imgcarrusel{
-  height: 200px;
-}
-
-@media screen and (max-width: 332px) {
-
-  .imgcarrusel{
-      height: 230px;
-  }
-  .logo{
-      width: 120px;
-      height: 120px;  
-  }
+.imgdetail{
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
 }
 
 /*------------------Stats-----------------------*/

@@ -5,16 +5,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Amazing Events</title>
+  <!-- href para enlazar styles -->
   <link rel="stylesheet" href="Assets/styles.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+
 </head>
 
 <body class="d-flex flex-column">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
-    </script>
-
+  <!--Nav bar para todas las paginas -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary navbar bg-dark fixed-top" data-bs-theme="dark">
     <div class="container-fluid">
       <img class="logo img-fluid ms-4" src="Assets/RecursosAmazingEvents/LogoAmazingEvents.png" alt="Logo">
@@ -33,7 +33,7 @@
       </div>
     </div>
   </nav>
-
+  <!--Carrusel Banner principal -->
   <div id="carouselExampleCaptions" class="carousel slide">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -75,7 +75,7 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-
+  <!--Check Box selector & Barra de busqueda -->
   <div class="container mt-4  mb-5">
     <div class="row">
       <div class="col-md-8">
@@ -113,69 +113,17 @@
       </div>
     </div>
   </div>
-
-
-  <div class="container-fluid mb-5 px-5 text-center">
-    <div class="row row-cols-1 row-cols-md-2 row-cols-sm-2  row-cols-lg-4 g-4">
-      <div class="col">
-        <div class="card h-100">
-          <img src="Assets/RecursosAmazingEvents/Cine7.jpg" class="card-img-top imgcard" alt="cinema">
-          <div class="card-body">
-            <h5 class="card-title">Cinemas</h5>
-            <p class="card-text">Enjoy the best movies</p>
-          </div>
-          <div class="card-footer bg-transparent d-flex justify-content-between flex-wrap text-center">
-            <small class="card-text mt-2 mb-2 ms-3">Price: $20</small>
-            <a href="detail.html" class="btn btn-outline-dark me-3 seemore">See more</a>
-          </div>
-        </div>
+  <!--Carrusel dinámico de cards-->
+  <div class="containercards ">
+    <div class="swiper mySwiper">
+      <div id="carrusel" class="swiper-wrapper">
+        <!--Acá se insertan las cards desde js-->
       </div>
-
-      <div class="col">
-        <div class="card h-100">
-          <img src="Assets/RecursosAmazingEvents/Conciertodemusica1.jpg" class="card-img-top imgcard" alt="concert">
-          <div class="card-body">
-            <h5 class="card-title">Concerts</h5>
-            <p class="card-text">Enjoy the best concerts</p>
-          </div>
-          <div class="card-footer bg-transparent d-flex justify-content-between flex-wrap text-center">
-            <small class="card-text mt-2 mb-2 ms-3">Price: $100</small>
-            <a href="detail.html" class="btn btn-outline-dark me-3 seemore">See more</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card h-100">
-          <img src="Assets/RecursosAmazingEvents/Feriadecomidas7.jpg" class="card-img-top imgcard" alt="festival">
-          <div class="card-body">
-            <h5 class="card-title">Festivals</h5>
-            <p class="card-text">Enjoy the best festivals</p>
-          </div>
-          <div class="card-footer bg-transparent d-flex justify-content-between flex-wrap text-center">
-            <small class="card-text mt-2 mb-2 ms-3">Price: $50</small>
-            <a href="detail.html" class="btn btn-outline-dark me-3 seemore">See more</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card h-100">
-          <img src="Assets/RecursosAmazingEvents/Fiestadedisfraces1.jpg" class="card-img-top imgcard" alt="Party">
-          <div class="card-body">
-            <h5 class="card-title">Partys</h5>
-            <p class="card-text">Enjoy the best partys</p>
-          </div>
-          <div class="card-footer bg-transparent d-flex justify-content-between flex-wrap text-center">
-            <small class="card-text mt-2 mb-2 ms-3">Price: $30</small>
-            <a href="detail.html" class="btn btn-outline-dark me-3 seemore">See more</a>
-          </div>
-        </div>
-      </div>
+      <div class="swiper-button-next botondespues"></div>
+      <div class="swiper-button-prev botonantes"></div>
     </div>
-
   </div>
-
+  <!--Footer (Pié de pagina con redes sociales) -->
   <footer class="text-white bg-body-secondary mt-auto">
     <div class="container-fluid m-0">
       <div class="row">
@@ -210,6 +158,15 @@
 
     </div>
   </footer>
+  <!--Script js para enlazar la pagina Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+    integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+    crossorigin="anonymous"></script>
+  <script src="./JavaScript/home.js" type="module"> </script>
 
 </body>
 
