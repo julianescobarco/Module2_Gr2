@@ -16,20 +16,19 @@ for (let i = 0; i < eventos.length; i++) {
 
 function detailsCard(eventos) {
     let imgdetail = document.getElementById('imgdetail');
-    let titulodetail = document.querySelector('#titulodetail');
-    let date = document.querySelector('#date');
-    let description = document.querySelector('#description');
-    let category = document.querySelector('#category');
-    let place = document.querySelector('#place');
-    let capacity = document.querySelector('#capacity');
-    let ases = document.querySelector('#ases');
-    let price = document.querySelector('#price');
+    let titulodetail = document.getElementById('titulodetail');
+    let date = document.getElementById('date');
+    let description = document.getElementById('description');
+    let category = document.getElementById('category');
+    let place = document.getElementById('place');
+    let capacity = document.getElementById('capacity');
+    let ases = document.getElementById('ases');
+    let price = document.getElementById('price');
 
-    let idClickStr = JSON.parse(sessionStorage.getItem('idClick'));
+    let idClickStr = sessionStorage.getItem("idClickStr");
     let idClick = parseInt(idClickStr);
 
     imgdetail.src = eventos[idClick].image
-    imgdetail.alt = eventos[idClick].name
     titulodetail.textContent = eventos[idClick].name
     date.textContent = "Date: " +eventos[idClick].date
     description.textContent = "Description: " +eventos[idClick].description
@@ -46,7 +45,7 @@ function detailsCard(eventos) {
 
 }
 
-let idClickStr = JSON.parse(sessionStorage.getItem('idClick'));
+let idClickStr = sessionStorage.getItem("idClickStr");
 let idClick = parseInt(idClickStr);
 let detailhome = idClick+"home"
 let detailpast = idClick+"past"
